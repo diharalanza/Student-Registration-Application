@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="StudentModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2012" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="StudentModelStoreContainer">
+    <EntitySet Name="Students" EntityType="StudentModel.Store.Students" store:Type="Tables" Schema="dbo" />
+  </EntityContainer>
+  <EntityType Name="Students">
+    <Key>
+      <PropertyRef Name="stu_id" />
+    </Key>
+    <Property Name="stu_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="full_name" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="phone_number" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="stu_address" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="birthday" Type="datetime" Nullable="false" />
+    <Property Name="join_date" Type="datetime" Nullable="false" />
+    <Property Name="gpa" Type="real" Nullable="false" />
+  </EntityType>
+</Schema>

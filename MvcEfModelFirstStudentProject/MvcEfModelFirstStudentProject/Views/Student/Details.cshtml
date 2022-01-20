@@ -1,0 +1,66 @@
+﻿@model MvcEfModelFirstStudentProject.Models.Student
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Student</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.full_name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.full_name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.phone_number)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.phone_number)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.stu_address)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.stu_address)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.birthday)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.birthday)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.join_date)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.join_date)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.gpa)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.gpa)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.stu_id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

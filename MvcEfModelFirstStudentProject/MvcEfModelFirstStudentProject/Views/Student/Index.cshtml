@@ -1,0 +1,70 @@
+﻿@model IEnumerable<MvcEfModelFirstStudentProject.Models.Student>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    <a href="student/FullReport" target="_blank" class="btn btn-primary" style="margin-top:20px;">Full Report</a>
+    <a href="student/JoinReport" target="_blank" class="btn btn-primary" style="margin-top:20px;">Filtered by Join Date</a>
+
+    
+</p>
+
+
+@Html.ActionLink("Create New", "Create")
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.full_name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.phone_number)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.stu_address)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.birthday)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.join_date)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.gpa)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.full_name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.phone_number)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.stu_address)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.birthday)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.join_date)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.gpa)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.stu_id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.stu_id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.stu_id })
+        </td>
+    </tr>
+}
+
+</table>
